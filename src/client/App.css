@@ -32,3 +32,10 @@ li {
   justify-content: center;
   align-items: center;
 }
+
+.app {
+  overflow-y: hidden;
+  &_overflowed {
+    overflow-y: auto;
+  }
+}

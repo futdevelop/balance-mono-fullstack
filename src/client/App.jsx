@@ -30,6 +30,7 @@ function App() {
   const {
     handleSendingData,
     handleFetchAppDataProtected,
+    isOpen
   } = useContext(AuthContext)
   const dispatch = useDispatch()
 
@@ -73,7 +74,7 @@ function App() {
 
   if (statusLoading === 'idle') {
     return (
-      <div className='app'>
+      <div className={`${isOpen ? 'app' : 'app_overflowed'}`}>
         <SnackbarProvider />
         <BrowserRouter>
           <Routes>
